@@ -55,7 +55,30 @@
 </head>
 <body>
   
-
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Hotel</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Voto</th>
+        <th scope="col">Distanza dal centro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php 
+      foreach($hotels as $element){
+        echo "<tr>";
+        echo "<th scope='row'>1</th>";
+        echo "<td>" . $element['name'] . "</td>";
+        echo "<td>" . $element['description'] . "</td>";
+        echo "<td>" . $element['vote'] . "</td>";
+        echo "<td>" . $element['distance_to_center'] . " Km </td>";
+        echo "</tr>";
+      }
+      ?>
+    </tbody>
+  </table>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
